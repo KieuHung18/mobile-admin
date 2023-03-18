@@ -8,15 +8,15 @@ import NotFound from "./features/not-found";
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/info",
       element: <Home />,
     },
     {
-      path: "/*",
+      path: "/info/*",
       element: <NotFound />,
     },
     {
-      path: "/components-demo",
+      path: "/info/components-demo",
       element: <ComponentsDemo />,
     },
   ]);
