@@ -1,26 +1,20 @@
 import React from "react";
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import ComponentsDemo from "./features/components-demo";
 import Home from "./features/home";
 import NotFound from "./features/not-found";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/info",
-      element: <Home />,
-    },
-    {
-      path: "/info/*",
-      element: <NotFound />,
-    },
-    {
-      path: "/info/components-demo",
-      element: <ComponentsDemo />,
-    },
-  ]);
-  return <RouterProvider router={router} />;
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/components-demo" element={<ComponentsDemo />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
+    </HashRouter>
+  );
 }
 
 export default App;
