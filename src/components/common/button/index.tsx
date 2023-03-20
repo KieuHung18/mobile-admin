@@ -23,12 +23,14 @@ const Button = (
   });
 
   const size = clsx({
-    ["px-6 py-2"]: props.size === "small",
-    ["px-8 py-3 font-muli text-[19px]"]: !props.size || props.size === "normal",
+    ["px-6 py-2 text-[13px]"]: props.size === "small",
+    ["px-8 py-3 font-muli text-[16px]"]: !props.size || props.size === "normal",
   });
 
   return (
     <button
+      data-te-ripple-init
+      data-te-ripple-color="light"
       className={clsx(
         "btn rounded-full h-full w-full transition-all duration-300",
         variantClassname,
