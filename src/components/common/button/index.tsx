@@ -32,7 +32,7 @@ const Button = (
       data-te-ripple-init
       data-te-ripple-color="light"
       className={clsx(
-        "btn rounded-full h-full w-full transition-all duration-300",
+        "btn rounded-full h-full w-full transition-all duration-300 flex items-center justify-center",
         variantClassname,
         size
       )}
