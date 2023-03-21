@@ -1,24 +1,16 @@
 import React from "react";
 
-interface LogoProps {
-  color?: string;
-  size?: string;
-  className?: string;
-}
-const Logo = (props: LogoProps) => {
+const Logo = (props: { className?: string } = { className: "" }) => {
   return (
     <svg
       className={props.className}
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width={props.size}
-      height={props.size}
       viewBox="0 0 200.000000 200.000000"
       preserveAspectRatio="xMidYMid meet"
     >
       <g
         transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
-        fill={props.color}
         stroke="none"
       >
         <path
