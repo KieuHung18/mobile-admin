@@ -1,10 +1,10 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import clsx from "clsx";
 import Spinner from "../../advance/spinner";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  content: any;
+  content: ReactNode;
   variant?: "primary" | "secondary";
   loading?: boolean;
   size?: "small" | "normal";
@@ -32,7 +32,7 @@ const Button = (
       data-te-ripple-init
       data-te-ripple-color="light"
       className={clsx(
-        "btn rounded-full h-full w-full transition-all duration-300 flex items-center justify-center",
+        "btn rounded-full h-full w-full duration-300 flex items-center justify-center",
         variantClassname,
         size
       )}

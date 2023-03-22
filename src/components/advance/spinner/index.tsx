@@ -3,7 +3,6 @@ import clsx from "clsx";
 
 interface SpinnerProps {
   size?: "large" | "medium" | "small";
-  variant?: "primary" | "secondary";
 }
 
 const Spinner = (props: SpinnerProps) => {
@@ -16,11 +15,7 @@ const Spinner = (props: SpinnerProps) => {
         { "h-[16px] w-[16px]": props.size === "small" }
       )}
     >
-      <svg
-        className="animate-spin h-5 w-5 text-neutral-light"
-        fill="none"
-        viewBox="0 0 24 24"
-      >
+      <svg className="animate-spin h-5 w-5 " fill="none" viewBox="0 0 24 24">
         <circle
           className="opacity-25"
           cx="12"

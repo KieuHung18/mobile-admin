@@ -1,9 +1,14 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import { NavLink } from "react-router-dom";
 
-const SideBarLink = (props: { title: string; path: string }) => {
+const SideBarLink = (props: {
+  title: string;
+  path: string;
+  onClick?: MouseEventHandler<HTMLAnchorElement> | undefined;
+}) => {
   return (
     <NavLink
+      onClick={props.onClick}
       className={({ isActive }) => {
         return isActive
           ? "[&>*]:visible [&>*]: flex items-center"
@@ -12,7 +17,7 @@ const SideBarLink = (props: { title: string; path: string }) => {
       to={props.path}
     >
       {props.title}
-      <div className="w-[20px] h-[2px] transition-all duration-250 bg-neutral-light inline-block ml-3"></div>
+      <div className="w-[20px] h-[2px] duration-200 bg-neutral-light inline-block ml-3"></div>
     </NavLink>
   );
 };
