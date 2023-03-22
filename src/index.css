@@ -33,7 +33,7 @@
 
 @layer base {
   body {
-    @apply overflow-x-hidden bg-primary-0;
+    @apply overflow-x-hidden;
   }
   h1,
   h2,
@@ -41,18 +41,21 @@
   h4,
   h5,
   h6 {
-    @apply text-neutral-light font-futura;
+    @apply font-futura;
   }
   p {
-    @apply text-primary-20 text-[15px] font-muli leading-7;
+    @apply text-[15px] font-muli leading-7;
   }
   a {
-    @apply text-neutral-light text-[16px];
+    @apply text-[16px];
   }
 }
 @layer components {
   .page-container {
-    @apply text-neutral-light flex min-h-[100vh] relative mt-20 md:mt-24 xl:mt-0;
+    @apply flex min-h-[100vh] relative mt-20 md:mt-24 xl:mt-0;
+  }
+  .reponsive-container {
+    @apply px-4 m-auto min-w-[75vw];
   }
 }
 body {

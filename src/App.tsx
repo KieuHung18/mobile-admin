@@ -39,7 +39,7 @@ function App() {
   });
 
   return (
-    <div>
+    <div className="text-neutral-light bg-primary-0">
       <SideBar handleTransition={handleTransition} />
       <Routes>{pages}</Routes>
     </div>

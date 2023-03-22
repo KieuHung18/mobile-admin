@@ -5,7 +5,7 @@ import Button from "../../components/common/button";
 const Home = () => {
   return (
     <div className="page-container bg-primary-5">
-      <div className="px-4 m-auto min-w-[75vw]">
+      <div className="reponsive-container">
         <h2 className="text-[14px] tracking-[4px] md:text-[16px] md:tracking-[8px] lg:text-[18px] font-sans">
           I Am Kieu Hung Tang
         </h2>
