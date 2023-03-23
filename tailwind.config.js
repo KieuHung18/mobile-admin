@@ -20,6 +20,7 @@ module.exports = {
     fontFamily: {
       muli: ["Muli", "sans-serif"],
       futura: ["Futura", "sans-serif"],
+      mrsSaint: ["MrsSaintDelafield", "sans-serif"],
     },
     extend: {},
   },

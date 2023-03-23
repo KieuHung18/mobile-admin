@@ -30,6 +30,11 @@
   src: url("../src/assets/fonts/FuturaPT-Heavy.woff2") format("truetype");
   font-weight: 700;
 }
+@font-face {
+  font-family: "MrsSaintDelafield";
+  src: url("../src/assets/fonts/MrsSaintDelafield-Regular.ttf")
+    format("truetype");
+}
 
 @layer base {
   body {
@@ -55,7 +60,7 @@
     @apply flex min-h-[100vh] relative mt-20 md:mt-24 xl:mt-0;
   }
   .reponsive-container {
-    @apply px-4 m-auto min-w-[75vw];
+    @apply px-4 mx-auto w-full flex items-center 2xl:max-w-[1400px];
   }
 }
 body {
