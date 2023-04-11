@@ -24,11 +24,9 @@ const SideBar = (
   const links = linkList.map((l, i) => {
     return (
       <li key={i}>
-        <SideBarLink
-          onClick={props.handleTransition}
-          title={l.title}
-          path={l.path}
-        />
+        <SideBarLink onClick={props.handleTransition} path={l.path}>
+          {l.title}
+        </SideBarLink>
       </li>
     );
   });
@@ -42,11 +40,9 @@ const SideBar = (
           <Logo className="fill-neutral-light w-12 h-12 lg:w-16 lg:h-16" />
         </Link>
         <div className="w-20 h-8 ml-auto">
-          <Button
-            content={<div>Menu</div>}
-            variant="secondary"
-            onClick={handleShowMenu}
-          />
+          <Button variant="secondary" onClick={handleShowMenu}>
+            Menu
+          </Button>
         </div>
       </div>
       <div

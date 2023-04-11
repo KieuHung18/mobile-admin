@@ -5,26 +5,23 @@ import PageSeperator from "../../components/icons/page separator";
 const ComponentsDemo = () => {
   const btnCont = "click me";
   const primaryBtnList: ButtonProps[] = [
-    { content: btnCont, size: "small" },
-    { content: btnCont, size: "small", loading: true },
-    { content: btnCont },
-    { content: btnCont, loading: true },
+    { children: btnCont, size: "small" },
+    { children: btnCont, size: "small", loading: true },
+    { children: btnCont },
+    { children: btnCont, loading: true },
   ];
   const seconddaryBtnList: ButtonProps[] = [
-    { variant: "secondary", content: btnCont, size: "small" },
-    { variant: "secondary", content: btnCont, size: "small", loading: true },
-    { variant: "secondary", content: btnCont },
-    { variant: "secondary", content: btnCont, loading: true },
+    { variant: "secondary", children: btnCont, size: "small" },
+    { variant: "secondary", children: btnCont, size: "small", loading: true },
+    { variant: "secondary", children: btnCont },
+    { variant: "secondary", children: btnCont, loading: true },
   ];
   const buttons = (list: ButtonProps[]) => {
     return list.map((b, i) => (
       <div className="inline p-2" key={i}>
-        <Button
-          content={b.content}
-          variant={b.variant}
-          size={b.size}
-          loading={b.loading}
-        />
+        <Button variant={b.variant} size={b.size} loading={b.loading}>
+          {b.children}
+        </Button>
       </div>
     ));
   };

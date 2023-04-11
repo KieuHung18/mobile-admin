@@ -4,17 +4,13 @@ import Spinner from "../../advance/spinner";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  content: ReactNode;
   variant?: "primary" | "secondary";
   loading?: boolean;
   size?: "small" | "normal";
+  children?: ReactNode | undefined;
 }
 
-const Button = (
-  props: ButtonProps = {
-    content: undefined,
-  }
-) => {
+const Button = (props: ButtonProps) => {
   const variantClassname = clsx({
     ["text-neutral-light/[0.6] bg-primary-10 bg-none hover:bg-primary-15 hover:text-neutral-light"]:
       !props.variant || props.variant === "primary",
@@ -32,14 +28,14 @@ const Button = (
       data-te-ripple-init
       data-te-ripple-color="light"
       className={clsx(
-        "btn rounded-full h-full w-full duration-300 flex items-center justify-center",
+        "rounded-full h-full w-full duration-300 flex items-center justify-center",
         variantClassname,
         size
       )}
       disabled={props.loading}
       {...props}
     >
-      {props.loading ? <Spinner></Spinner> : props.content}
+      {props.loading ? <Spinner></Spinner> : props.children}
     </button>
   );
 };

@@ -1,9 +1,9 @@
-import React, { MouseEventHandler } from "react";
+import React, { MouseEventHandler, ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 
 const SideBarLink = (props: {
-  title: string;
   path: string;
+  children?: ReactNode | undefined;
   onClick?: MouseEventHandler<HTMLAnchorElement> | undefined;
 }) => {
   return (
@@ -16,7 +16,7 @@ const SideBarLink = (props: {
       }}
       to={props.path}
     >
-      {props.title}
+      {props.children}
       <div className="w-[20px] h-[2px] duration-200 bg-neutral-light inline-block ml-3"></div>
     </NavLink>
   );
