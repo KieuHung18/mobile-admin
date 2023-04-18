@@ -7,9 +7,7 @@ import { User } from "../../services/model.types";
 const AboutMe = () => {
   const [user, setUser] = useState<User>();
   const getUser = async () => {
-    const [fetchData, error] = await apis.users.retrieve(
-      "kieuhungcm2015@gmail.com"
-    );
+    const [fetchData, error] = await apis.users.retrieve();
     if (!error) {
       setUser(fetchData);
     } else {
@@ -21,8 +19,8 @@ const AboutMe = () => {
   }, []);
   return (
     <div className="page-container bg-primary-10">
-      <div className="reponsive-container">
-        <div className="grid lg:grid-flow-col 2xl:max-w-[72vw]">
+      <div className="responsive-container">
+        <div className="grid lg:grid-flow-col">
           <div className="mb-10 px-4">
             <img src={user?.profileUrl}></img>
           </div>

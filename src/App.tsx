@@ -7,12 +7,17 @@ import NotFound from "./features/not-found";
 import SideBar from "./features/side-bar";
 import { useState } from "react";
 import AboutMe from "./features/about-me";
+import Artwork from "./features/artwork";
+import Project from "./features/project";
+import PageSeperator from "./components/icons/page separator";
 
 function App() {
   const [transition, setTransition] = useState("");
   const pageList = [
     { path: "/", component: <Home /> },
     { path: "/about-me", component: <AboutMe /> },
+    { path: "/project", component: <Project /> },
+    { path: "/artwork", component: <Artwork /> },
     { path: "/components-demo", component: <ComponentsDemo /> },
     { path: "/*", component: <NotFound /> },
   ];

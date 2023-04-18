@@ -11,7 +11,7 @@ const SideBarLink = (props: {
       onClick={props.onClick}
       className={({ isActive }) => {
         return isActive
-          ? "[&>*]:visible [&>*]: flex items-center"
+          ? "visible flex items-center"
           : "[&>*]:invisible [&>*]:translate-x-7 flex items-center";
       }}
       to={props.path}

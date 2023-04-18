@@ -1,13 +1,11 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import clsx from "clsx";
-import Spinner from "../../advance/spinner";
-
+import Spinner from "../../animations/spinner";
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
   loading?: boolean;
   size?: "small" | "normal";
-  children?: ReactNode | undefined;
 }
 
 const Button = (props: ButtonProps) => {
@@ -27,13 +25,14 @@ const Button = (props: ButtonProps) => {
     <button
       data-te-ripple-init
       data-te-ripple-color="light"
-      className={clsx(
-        "rounded-full h-full w-full duration-300 flex items-center justify-center",
-        variantClassname,
-        size
-      )}
-      disabled={props.loading}
       {...props}
+      className={clsx(
+        "rounded-full min-h-fit min-w-fit duration-300 flex items-center justify-center",
+        variantClassname,
+        size,
+        props.className
+      )}
+      disabled={props.loading || props.disabled}
     >
       {props.loading ? <Spinner></Spinner> : props.children}
     </button>
