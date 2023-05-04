@@ -5,9 +5,15 @@ export interface User {
   email?: string;
   intro?: string;
   title?: string;
-  phone?: number;
+  phone?: string;
   address?: string;
   aboutMe?: string;
   description?: string;
   profileUrl?: string;
+}
+export interface Artwork {
+  url: string;
+  name?: string;
+  feature?: boolean;
+  publish?: boolean;
 }
