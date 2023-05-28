@@ -1,6 +1,5 @@
 import React from "react";
 import PageSeperator from "../../components/icons/page separator";
-import Button from "../../components/common/button";
 import { useEffect, useState } from "react";
 import apis from "../../services/apis";
 import { User } from "../../services/model.types";
@@ -8,7 +7,7 @@ import { User } from "../../services/model.types";
 const Home = () => {
   const [user, setUser] = useState<User>();
   const getUser = async () => {
-    const [fetchData, error] = await apis.users.retrieve();
+    const [fetchData, error] = await apis.auth.session();
     if (!error) {
       setUser(fetchData);
     } else {
@@ -23,14 +22,11 @@ const Home = () => {
       <div className="responsive-container">
         <div className="px-4 pb-16">
           <h2 className="text-[14px] tracking-[4px] md:text-[16px] md:tracking-[8px] lg:text-[18px] font-sans capitalize">
-            I Am {user?.firstName} {user?.middleName} {user?.lastName}
+            Hello {user?.firstName} {user?.lastName}
           </h2>
           <h2 className="text-[35px] sm:[text-50px] md:text-[60px] lg:text-[90px] xl:text-[100px] capitalize">
-            {user?.intro}
+            Wellcome to gallery admin
           </h2>
-          <div className="w-44 flex">
-            <Button variant="secondary">Contact Me</Button>
-          </div>
         </div>
       </div>
       <PageSeperator className="fill-primary-10" />

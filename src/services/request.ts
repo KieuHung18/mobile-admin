@@ -6,11 +6,21 @@ const backendRequest = async (
   payload?: any
 ) => {
   const url = backendUrl + path;
+  let authentication = "";
+
+  const auth = localStorage.getItem("authentication");
+
+  if (auth) {
+    authentication = auth;
+  }
+
   const options: RequestInit = {
-    method: method,
     headers: {
       "Content-Type": "application/json",
+      authentication: authentication,
     },
+    method: method,
+    credentials: "include",
   };
   if (payload) {
     options.body = payload;
@@ -18,7 +28,7 @@ const backendRequest = async (
   let fetchData: any, error: any;
   await fetch(url, options)
     .then(async (res) => res.json())
-    .then((data) => {
+    .then((data: any) => {
       fetchData = data?.response;
       error = data?.error;
     })
@@ -27,5 +37,4 @@ const backendRequest = async (
     });
   return [fetchData, error];
 };
-
 export { backendRequest };

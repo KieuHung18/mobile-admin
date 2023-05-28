@@ -1,19 +1,23 @@
 export interface User {
   firstName?: string;
-  middleName?: string;
   lastName?: string;
   email?: string;
-  intro?: string;
-  title?: string;
-  phone?: string;
-  address?: string;
-  aboutMe?: string;
-  description?: string;
   profileUrl?: string;
 }
 export interface Artwork {
+  id: string;
   url: string;
+  description: string;
   name?: string;
   feature?: boolean;
   publish?: boolean;
+}
+export interface Report {
+  id: string;
+  user: User;
+  artwork: Artwork;
+  name: string;
+  description: string;
+  userId: string;
+  artworkId: string;
 }

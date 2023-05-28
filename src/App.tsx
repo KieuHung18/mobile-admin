@@ -1,24 +1,21 @@
 import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import ComponentsDemo from "./features/components-demo";
 import Home from "./features/home";
 import NotFound from "./features/not-found";
 import SideBar from "./features/side-bar";
 import { useState } from "react";
-import AboutMe from "./features/about-me";
-import Artwork from "./features/artwork";
-import Project from "./features/project";
-import PageSeperator from "./components/icons/page separator";
+import Reports from "./features/reports";
+import Login from "./features/login";
+import ReportDetail from "./features/report";
 
 function App() {
   const [transition, setTransition] = useState("");
   const pageList = [
     { path: "/", component: <Home /> },
-    { path: "/about-me", component: <AboutMe /> },
-    { path: "/project", component: <Project /> },
-    { path: "/artwork", component: <Artwork /> },
-    { path: "/components-demo", component: <ComponentsDemo /> },
+    { path: "/reports/:id", component: <ReportDetail /> },
+    { path: "/reports", component: <Reports /> },
+    { path: "/login", component: <Login /> },
     { path: "/*", component: <NotFound /> },
   ];
 
