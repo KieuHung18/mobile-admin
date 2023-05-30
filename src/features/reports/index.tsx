@@ -71,8 +71,7 @@ const Reports = () => {
     <div className="page-container bg-primary-10 md:pb-16">
       <div className="responsive-container block pt-16 pb-56 md:pb-64">
         <div className="title-section">
-          <span className="page-title">Artwork</span>
-          <h2 className="page-sub-title">Latest Art</h2>
+          <h2 className="page-sub-title">Reports</h2>
         </div>
         <table className="min-w-full text-left text-sm font-light">
           <thead className="border-b font-medium dark:border-neutral-500">
