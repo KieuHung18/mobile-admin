@@ -16,16 +16,20 @@ const CreateUser = () => {
   const navigate = useNavigate();
   const handleCreate = async (e: FormEvent) => {
     e.preventDefault();
-    if (data.confirmPassword === data.password) {
-      const [connection, error] = await apis.users.create(data);
-      if (error) {
-        alert(error.message);
-      } else {
-        navigate("/reports");
-        alert("User added");
-      }
+    if (data.password.length < 6) {
+      alert("Password must have at least 6 character");
     } else {
-      alert("Confirm password incorrect");
+      if (data.confirmPassword === data.password) {
+        const [connection, error] = await apis.users.create(data);
+        if (error) {
+          alert(error.message);
+        } else {
+          navigate("/reports");
+          alert("User added");
+        }
+      } else {
+        alert("Confirm password incorrect");
+      }
     }
   };
 
