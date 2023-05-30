@@ -14,7 +14,6 @@ const ReportDetail = () => {
     const [fetchData, error] = await apis.reports.retrieve(id);
     if (error) {
       navigate("/reports");
-      // alert(error.message);
     }
     {
       setReport(fetchData);
@@ -32,6 +31,7 @@ const ReportDetail = () => {
         alert(error.message);
       } else {
         alert("Report solved");
+        navigate("/reports");
       }
     }
   };
@@ -100,12 +100,12 @@ const ReportDetail = () => {
             </table>
             <div className="w-52">
               <Button
-                className="w-full text-danger-600 my-4"
+                className="w-full my-4"
                 onClick={() => {
                   handleResolve(report?.artwork);
                 }}
               >
-                Delete artwork
+                <div className="text-danger-600">Delete artwork</div>
               </Button>
               <Button
                 className="w-full"

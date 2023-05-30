@@ -4,7 +4,9 @@ import InputContainer from "../../components/common/input/input-container";
 import Input from "../../components/common/input/input-field";
 import apis from "../../services/apis";
 import type { FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const navigate = useNavigate();
   const data = {
     email: "",
     password: "",
@@ -16,6 +18,7 @@ const Login = () => {
       alert(error.message);
     } else {
       localStorage.setItem("authentication", connection);
+      navigate("/");
     }
   };
 
@@ -32,7 +35,7 @@ const Login = () => {
               required
             />
           </InputContainer>
-          <InputContainer lable="Password">
+          <InputContainer lable="Password" className="my-2">
             <Input
               type="password"
               onBlur={(e: { target: { value: string } }) => {
@@ -41,8 +44,9 @@ const Login = () => {
               required
             />
           </InputContainer>
-          <Button>Login</Button>
+          <Button className="w-full my-4">Login</Button>
           <Button
+            className="w-full"
             type="button"
             onClick={() => {
               localStorage.clear();

@@ -8,6 +8,7 @@ import { useState } from "react";
 import Reports from "./features/reports";
 import Login from "./features/login";
 import ReportDetail from "./features/report";
+import CreateUser from "./features/create-user";
 
 function App() {
   const [transition, setTransition] = useState("");
@@ -15,6 +16,7 @@ function App() {
     { path: "/", component: <Home /> },
     { path: "/reports/:id", component: <ReportDetail /> },
     { path: "/reports", component: <Reports /> },
+    { path: "/users", component: <CreateUser /> },
     { path: "/login", component: <Login /> },
     { path: "/*", component: <NotFound /> },
   ];

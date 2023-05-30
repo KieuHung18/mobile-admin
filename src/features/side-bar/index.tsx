@@ -12,6 +12,8 @@ const SideBar = (props: {
   const linkList: { title: string; path: string }[] = [
     { title: "Home", path: "/" },
     { title: "Reports", path: "/reports" },
+    { title: "New User", path: "/users" },
+    { title: "Login", path: "/login" },
   ];
   const [hidden, setHidden] = useState(true);
   window.addEventListener("resize", () => {
