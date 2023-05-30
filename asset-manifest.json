@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/mobile-admin/static/css/main.e3d75bd4.css",
-    "main.js": "/mobile-admin/static/js/main.1c2cfbaf.js",
+    "main.css": "/mobile-admin/static/css/main.4527f8b8.css",
+    "main.js": "/mobile-admin/static/js/main.20e30be3.js",
     "static/js/787.676fbc64.chunk.js": "/mobile-admin/static/js/787.676fbc64.chunk.js",
     "static/media/MrsSaintDelafield-Regular.ttf": "/mobile-admin/static/media/MrsSaintDelafield-Regular.5bf734a989314fb09a30.ttf",
     "static/media/FuturaPT-Demi.woff2": "/mobile-admin/static/media/FuturaPT-Demi.9427520fbb37a99905ea.woff2",
@@ -10,12 +10,12 @@
     "static/media/Muli-italic.woff2": "/mobile-admin/static/media/Muli-italic.494e1faa07d56c36643d.woff2",
     "static/media/Muli-regular.woff2": "/mobile-admin/static/media/Muli-regular.4922c23a53233c77a9c7.woff2",
     "index.html": "/mobile-admin/index.html",
-    "main.e3d75bd4.css.map": "/mobile-admin/static/css/main.e3d75bd4.css.map",
-    "main.1c2cfbaf.js.map": "/mobile-admin/static/js/main.1c2cfbaf.js.map",
+    "main.4527f8b8.css.map": "/mobile-admin/static/css/main.4527f8b8.css.map",
+    "main.20e30be3.js.map": "/mobile-admin/static/js/main.20e30be3.js.map",
     "787.676fbc64.chunk.js.map": "/mobile-admin/static/js/787.676fbc64.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3d75bd4.css",
-    "static/js/main.1c2cfbaf.js"
+    "static/css/main.4527f8b8.css",
+    "static/js/main.20e30be3.js"
   ]
 }
