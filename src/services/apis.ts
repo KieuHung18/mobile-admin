@@ -38,7 +38,7 @@ export default {
     },
 
     login(data: { email: string; password: string }) {
-      const path = `/admin/login`;
+      const path = `/auth/admin/login`;
       return backendRequest("POST", path, JSON.stringify(data));
     },
   },
